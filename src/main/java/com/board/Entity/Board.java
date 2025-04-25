@@ -18,10 +18,10 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "BOARD")
 
-public class board {
+public class Board {
     @Id
     @Column(name = "id")
-    private long id;
+    private Long id;
     @Column(name = "")
     private String title;
     @Column(name = "content")
@@ -32,4 +32,9 @@ public class board {
     private LocalDateTime createAt;
     @Column(name = "update_at")
     private LocalDateTime updateAt;
+
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 }
